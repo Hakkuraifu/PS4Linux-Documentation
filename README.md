@@ -149,6 +149,8 @@ This list can change in the futur.
 
 - http://ps4xploit.zd.lu | by [Nazky](https://twitter.com/NazkyYT)
 - http://kmeps4.site | By [Kameleon](https://twitter.com/KameleonRe)
+- http://xperiments.in/xhost/ | by [xps3riments](https://twitter.com/xps3riments)
+- http://karo218.ir | By [Karo](https://twitter.com/karo_sharifi)
 
 
 ## Little F.A.Q
