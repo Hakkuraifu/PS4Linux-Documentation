@@ -149,7 +149,6 @@ This list can change in the futur.
 
 - http://ps4xploit.zd.lu | by [Nazky](https://twitter.com/NazkyYT)
 - http://kmeps4.site | By [Kameleon](https://twitter.com/KameleonRe)
-- http://prb123.ir | By [PRB](https://twitter.com/Prb29327239)
 
 
 ## Little F.A.Q
