@@ -112,7 +112,7 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 #### 4) Installing the OS.
 
-⚠️ USE A USB 3.0 DEVICE !!!!!!!!!!!!!!!!!!!!!! ⚠️
+⚠️ USE A >=16GB USB 3.0 DEVICE !!!!!!!!!!!!!!!!!!!!!! ⚠️
 
 - Format the USB 3.0 Device to fat32 (you can use [this software](http://ridgecrop.co.uk/index.htm?guiformat.htm)).
 
@@ -138,10 +138,10 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 #### Optional - Unistalling.
 
-To unistalling a OS installed on a USB Device just format the USB Device.
+To unistalling a OS install on a USB Device just format the USB Device.
 
 #### Optional - Unistalling the OS on the HDD.
-To unistalling a OS installed on the HDD just delete the **Arch.img** file in /usr/home
+To unistalling a OS install on the HDD just delete the **Arch.img** file in /usr/home
 
 ## Trust host to use.
 
@@ -150,3 +150,21 @@ This list can change in the futur.
 - http://ps4xploit.zd.lu | by [Nazky](https://twitter.com/NazkyYT)
 - http://kmeps4.site | By [Kameleon](https://twitter.com/KameleonRe)
 - http://prb123.ir | By [PRB](https://twitter.com/Prb29327239)
+
+
+## Little F.A.Q
+
+### I have a black screen 
+It's a 'bug' in the 5.x kernel you need to refresh the HDMI the most easy way it's to wait until you get no signal then moved the mouse or pressed a key on the keyboard.
+
+### I still have a black screen even with the kernel 4.14
+Make sure you'r display is compatible with the 1080p resolution, if you still have a black screen try a others monitor.
+
+### I don't have WIFI or BT
+This can be caused by the kernel or the distro, not real fix here use a wifi or/and a bt dongle.
+
+### Some apps not launch why ?
+FlatPak apps seems to have some problems with the ps4, and Snaps apps is not working, not real fix here use AUR.
+
+### I can't use my controller as a mouse why ?
+Some distro don't have ds4drv preinstall (Cutefish for the exemple here) use the store (pamac) to install ds4drv (it's recommend to install the motion control one) then open a terminal, connect you'r ds4 in usb and run  ```ds4drv --hidraw ```
