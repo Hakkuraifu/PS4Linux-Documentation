@@ -120,16 +120,33 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 - Rename the OS to 'psxitarch.tar.xz' (if you use the initramfs.cpio.gz from Nazky rename the os to arch.tar.xz).
 
-- Launch the 1GB Linux payload using one of the trusted host in the list below.
+- Launch the 1GB Linux payload using one the trusted host in the list below.
 
 - When rescushell start run ```exec install-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec install-arch.sh```) and wait.
 
-- When the installation is done the OS is going to boot automaticlly, if the OS not boot run ```exec start-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec start-arch.sh```) and wait (you need to run```exec start-arch.sh``` twice everytime you reboot the OS).
+- When the installation is done the OS is going to boot automaticlly, if the OS not boot run ```exec start-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec start-arch.sh```) and wait (you need to run```exec start-arch.sh``` twice everytime you reboot the OS)
+
+#### Optional - Installing the OS on the HDD.
+
+⚠️ USE A COMPATIBLE PS4 !!!!!!!!!!!!!!!!!!!!!! ⚠️
+
+- Use a FTP Client and transfert the bzimage, the initramfs.cpio.gz from Nazky and the OS to /usr/system/boot.
+- Run any Linux GB using one of the trusted host in the list below. 
+- When rescushell start run ```exec install-HDD.sh``` and set how many GB you want to give to linux.
+- Wait..
+- When the installation is done the os is going to boot automaticlly, if the OS not boot press **CTRL + D** or run ```exec start-arch.sh```.
+
+#### Optional - Unistalling.
+
+To unistalling a OS installed on a USB Device just format the USB Device.
+
+#### Optional - Unistalling the OS on the HDD.
+To unistalling a OS installed on the HDD just delete the **Arch.img** file in /usr/home
 
 ## Trust host to use.
 
 This list can change in the futur.
 
 - http://ps4xploit.zd.lu | by [Nazky](https://twitter.com/NazkyYT)
-- http://kmeps4.site/index.html | By [Kameleon](https://twitter.com/KameleonRe)
-- http://prb123.ir/index.html | By [PRB](https://twitter.com/Prb29327239)
+- http://kmeps4.site | By [Kameleon](https://twitter.com/KameleonRe)
+- http://prb123.ir | By [PRB](https://twitter.com/Prb29327239)
