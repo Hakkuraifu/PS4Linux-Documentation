@@ -120,7 +120,7 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 - Rename the OS to 'psxitarch.tar.xz' (if you use the initramfs.cpio.gz from Nazky rename the os to arch.tar.xz).
 
-- Launch the 1GB Linux payload using one the trusted host in the list below.
+- Launch the 1GB Linux payload using one of the trusted host in the list below.
 
 - When rescushell start run ```exec install-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec install-arch.sh```) and wait.
 
