@@ -42,11 +42,11 @@ A complete documentation for Linux on the PlayStation 4
 
 ### How to update Psxitarch ?
 
-You can find a complete tuto [here](https://github.com/hippie68/psxitarch-how-to)
+You can find a complete tuto [here](https://github.com/hippie68/psxitarch-how-to).
 
 ### How to update Fedora ?
 
-You can find a complete tuto [here](https://youtu.be/WgukYE-2vx4?t=1029)
+You can find a complete tuto [here](https://youtu.be/WgukYE-2vx4?t=1029).
 
 ### How to update CuteFish OS ?
 
@@ -54,24 +54,24 @@ You can find a complete tuto [here](https://youtu.be/WgukYE-2vx4?t=1029)
 
 ```sudo pacman -Syyu```
 
-It's update :D (you maybe have to restart the PS4)
+It's update :D (you maybe have to restart the PS4).
 
 ##### Using Pamac
 
-- Open the store (Add/remove software) app
-- Go to "Update"
-- Click on "Apply"
+- Open the store (Add/remove software) app.
+- Go to "Update".
+- Click on "Apply".
 - Wait...
-- It's update :D (you maybe have to restart the PS4)
+- It's update :D (you maybe have to restart the PS4).
 
 ## How to make my own OS ?
 
 What you need :
 
-- A compatible OS
-- A vm (virtual box, VMware, qemu, ...) or a PC/Laptop
-- The PS4 drivers [here](https://github.com/Hakkuraifu/PS4Linux-ArchDrivers)
-- A brain :p
+- A compatible OS.
+- A vm (virtual box, VMware, qemu, ...) or a PC/Laptop.
+- The PS4 drivers [here](https://github.com/Hakkuraifu/PS4Linux-ArchDrivers).
+- A brain :p.
 
 #### 1) The OS.
 
@@ -79,15 +79,15 @@ You need a compatible OS, theoriclly all linux distrubution can be run on the PS
 
 #### 2) Installing PS4 drivers Using precompiled drivers.
 
-After installing the OS on a vm (or a real PC/Laptop) you need to add the PS4Xploit repo
+After installing the OS on a vm (or a real PC/Laptop) you need to add the PS4Xploit repo.
 
 ```sudo echo -e "\n[ps4xploit-repo-arch]\nSigLevel = Optional TrustAll\nServer = https://PS4Xploit.zd.lu/Linux/Repo/x86_64" >> /etc/pacman.conf```
 
-Then update the repos
+Then update the repos.
 
 ```sudo pacman -Syyu```
 
-And install the drivers
+And install the drivers.
 
 ```sudo pacman -Syy mesa-ps4 lib32-libdrm-ps4 lib32-mesa-ps4 libdrm-ps4 xf86-video-amdgpu-ps4```
 
@@ -97,17 +97,17 @@ And install the drivers
 
 After installing the drivers and customized the OS like you want you can now backup the OS to be able to install it on the PS4.
 
-First it's recommended to go to the root folder
+First it's recommended to go to the root folder.
 
 ```cd /```
 
-Now you can backup the OS (you maybe have to change the command depending of the OS you use)
+Now you can backup the OS (you maybe have to change the command depending of the OS you use).
 
-(Reaplce 'DistroName' by the name of you'r distro)
+(Reaplce 'DistroName' by the name of you'r distro).
 
 ```sudo tar -cvf DistroName.tar.xz --exclude=/DistroName.tar.xz --exclude=/var/cache --one-file-system / -I "xz -9"```
 
- MAX SIZE <=3.2GB
+ MAX SIZE <=3.2GB.
 
 
 #### 4) Installing the OS.
@@ -124,7 +124,7 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 - When rescushell start run ```exec install-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec install-arch.sh```) and wait.
 
-- When the installation is done the OS is going to boot automaticlly, if the OS not boot run ```exec start-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec start-arch.sh```) and wait (you need to run```exec start-arch.sh``` twice everytime you reboot the OS)
+- When the installation is done the OS is going to boot automaticlly, if the OS not boot run ```exec start-psxitarch.sh``` (if you use the initramfs.cpio.gz from Nazky run ```exec start-arch.sh```) and wait (you need to run```exec start-arch.sh``` twice everytime you reboot the OS).
 
 #### Optional - Installing the OS on the HDD.
 
@@ -141,7 +141,7 @@ Now you can backup the OS (you maybe have to change the command depending of the
 To unistalling a OS install on a USB Device just format the USB Device.
 
 #### Optional - Unistalling the OS on the HDD.
-To unistalling a OS install on the HDD just delete the **Arch.img** file in /usr/home
+To unistalling a OS install on the HDD just delete the **Arch.img** file in /usr/home.
 
 ## Trust host to use.
 
@@ -167,4 +167,4 @@ This can be caused by the kernel or the distro, not real fix here use a wifi or/
 FlatPak apps seems to have some problems with the ps4, and Snaps apps is not working, not real fix here use AUR.
 
 ### I can't use my controller as a mouse why ?
-Some distro don't have ds4drv preinstall (Cutefish for the exemple here) use the store (pamac) to install ds4drv (it's recommend to install the motion control one) then open a terminal, connect you'r ds4 in usb and run  ```ds4drv --hidraw ```
+Some distro don't have ds4drv preinstall (Cutefish for the exemple here) use the store (pamac) to install ds4drv (it's recommend to install the motion control one) then open a terminal, connect you'r ds4 in usb and run  ```ds4drv --hidraw ```.
