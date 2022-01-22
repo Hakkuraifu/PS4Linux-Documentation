@@ -105,7 +105,7 @@ First it's recommended to go to the root folder.
 
 Now you can backup the OS (you maybe have to change the command depending of the OS you use).
 
-(Reaplce 'DistroName' by the name of you'r distro).
+(Replace 'DistroName' by the name of you'r distro).
 
 ```sudo tar -cvf DistroName.tar.xz --exclude=/DistroName.tar.xz --exclude=/var/cache --one-file-system / -I "xz -9"```
 
