@@ -18,7 +18,7 @@ A complete documentation for Linux on the PlayStation 4
 |--------------|-----------|
 | Aeolia | [**4.14.93** (Most Stable - HDD Support - By Psxita)](https://mega.nz/file/EJhBzTIQ#rpbOcpIpulojUxRUiZjLQ7RqS6tlNc6JmcCrgSxyG-g) [**5.3.18** (BETA - Vulkan support - HDD Support - By Mircoho)](https://github.com/ps4boot/ps4-linux/releases/download/v1/bzImageAeolia) [**5.15.12** (ALPHA - NO STABLE - Vulkan support - No HDD Support - by codedwrench)](https://mega.nz/file/0wgETIxI#2nzITm4YokEQXAmm5_lHcPXKotlr3Tj1qbHutKS9BqA)|
 | Belize | [**4.14.93** (Most Stable - HDD Support - By tihmstar)](https://github.com/Nazky/ps4-linux/releases/download/4.19.93-belize/bzImage) [**5.3.18** (BETA - Vulkan support - HDD Support - By Mircoho)](https://github.com/ps4boot/ps4-linux/releases/download/v1/bzImage) [**5.15.12** (ALPHA - NO STABLE - Vulkan support - No HDD Support - by codedwrench))](https://mega.nz/file/0wgETIxI#2nzITm4YokEQXAmm5_lHcPXKotlr3Tj1qbHutKS9BqA) |
-| Baikal | [**4.14.93** (Most Stable - No HDD Support - By Psxita)](https://mega.nz/file/4FhBjbaS#zgy2TFTPN1fdWLyLZaJJBfIv2cZQOExdXvfYRVqIHNU) [**5.3.18** (BETA - Vulkan support - No HDD Support - By Mircoho)](https://github.com/ps4boot/ps4-linux/releases/download/v1/bzImageBaikal) [**5.15.12** (ALPHA - NO STABLE - Vulkan support - No HDD Support - by codedwrench)](https://mega.nz/file/Z1BywBxC#5HDoTE82zcaYdaCxlbuoNNzM4WJhdANriM0I4HEtmgs)  |
+| Baikal | [**4.14.93** (Most Stable - No HDD Support - By Psxita)](https://mega.nz/file/4FhBjbaS#zgy2TFTPN1fdWLyLZaJJBfIv2cZQOExdXvfYRVqIHNU) [**5.3.18** (BETA - Vulkan support - No HDD Support - By Mircoho)](https://github.com/ps4boot/ps4-linux/releases/download/v1/bzImageBaikal) |
 
 Aeolia, Belize and Baikal are based on the you'r PS4 model take a look [here](https://www.psdevwiki.com/ps4/Southbridge#Southbridge_revisions) (thanks to [@Plattntektonik](https://twitter.com/Plattntektonik))
 
@@ -132,13 +132,13 @@ Now you can backup the OS (you maybe have to change the command depending of the
 
 ⚠️ USE A COMPATIBLE PS4 !!!!!!!!!!!!!!!!!!!!!! ⚠️
 
-- Use a FTP Client and transfert the bzimage, the initramfs.cpio.gz from Nazky and the OS to /usr/system/boot.
-- Run any Linux GB using one of the trusted host in the list below. 
-- When rescushell start run ```exec install-HDD.sh``` and set how many GB you want to give to linux.
-- Wait..
-- When the installation is done the os is going to boot automaticlly, if the OS not boot press **CTRL + D** or run ```exec start-arch.sh```.
+- Use a FTP Client and transfer the bzimage, the initramfs.cpio.gz from Nazky and the OS (this should be called arch.tar.xz) to /usr/system/boot.
+- Run any GB Linux payload using one of the trusted hosts in the list below. 
+- When the rescueshell starts run ```exec install-HDD.sh``` and set how much space in GBs you want to give to linux.
+- Wait until it's finished..
+- When the installation is done the OS is going to boot automatically, if the OS does not boot; press **CTRL + D** or run ```exec start-arch.sh```.
 
-#### Optional - Unistalling.
+#### Optional - Uninstalling.
 
 To unistalling a OS install on a USB Device just format the USB Device.
 
@@ -171,3 +171,20 @@ FlatPak apps seems to have some problems with the ps4, and Snaps apps is not wor
 
 ### I can't use my controller as a mouse why ?
 Some distro don't have ds4drv preinstall (Cutefish for the exemple here) use the store (pamac) to install ds4drv (it's recommend to install the motion control one) then open a terminal, connect you'r ds4 in usb and run  ```ds4drv --hidraw ```.
+
+### While installing to HDD I'm getting tar: invalid magic
+The arch.tar.xz you ftp-ed to the hard drive is not a real tar.xz file, its most likely a tar.gz. This seems to be the case for the psxitarch.tar.xz OSes floating around. 
+To use these types of tar files, you can type the following after the error shows:
+
+```bash
+tar -xvf /ps4hdd/system/boot/arch.tar.xz
+```
+
+This will take a while!
+After that is done run:
+```
+exec switch_root /newroot /newroot/sbin/init
+```
+
+If nothing happens after that, you could try to press **CTRL-D** twice.
+
